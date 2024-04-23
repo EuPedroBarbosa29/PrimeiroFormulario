@@ -1,0 +1,165 @@
+ <!-- exemplo de como escreve input <input type="text" name="importante para o servidor" id="identificadro unico'/> -->
+
+ <!--Exemplo abaixo mostra como começar um input Lembre-se do LABEL 
+<label for="Titulo"> Titulo do evento</label>
+<input type="text" name="Titulo" id="Titulo"> 
+
+
+ caixa de seleção 
+<select name="" id="">
+  <option value="music">Música</option>
+  <option value="movie">Filme</option>
+  
+  </select>
+
+  Conteúdo para fazer uma descrição 
+
+  <textarea name="" id="" cols="30" rows="10"> </textarea>
+
+ a tag form serve para começar um formulário. O 'action' vai dizer para onde esse formulario será enviado (se eu não enviar para lugar nenhum ele fica na pagina). 
+ Method: GET: RECEBER E ENVIAR RECURSOS (se não colocar nenhum automaticamente entende-se que será GET )
+         POST: ENVIAR RECURSOS 
+     
+
+  <form>
+    <input type=" text " name="q">
+    <input type="submit" value="Pesquisar">
+
+
+  </form>
+      --> 
+
+      <!DOCTYPE html>
+      <html lang="pt-br">
+      <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>formulario</title>
+        <link rel="stylesheet" href="styler.css">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+      </head>
+      <body>
+        <div class="page">
+          <header>
+            <h1>Crie e compartilhe 
+              seu evento.</h1>
+            
+              <p>O primeiro passo, é preencher esse
+              formulário de inscrição.</p>
+            </header>
+              <form id="my-form">
+            
+                <fieldset>
+                  <div class="fildset-wrapper"> 
+                <legend> Informações do evento  </legend>
+                <div class="input-wrapper">
+                  <label for="event-title">Titúlo do evento <span> (mínimo 8 caracteres) </span></label>
+                  <input 
+                  type="text" 
+                  id="event-title"
+                  required
+                  minlength="8"
+                  />
+                </div>
+
+                <div class="input-wrapper">
+                  <label for="event-link">Link do evento <span> (comece com https://) </span></label>
+                  <input type="url" id="event-link" required minlength="8"/>
+                </div>
+
+                <div class="input-wrapper">
+                  <label for="event-whatsapp">Whatsapp para contato  <span> (somente números) </span></label>
+                  <input type="number" id="event-whatsapp" required minlength="8"/>
+                </div>
+
+                <div class="input-wrapper">
+                  <label for="event-info"> Informações extras</label>
+                  <textarea id="event-info"></textarea>
+                </div>
+
+                <div class="input-wrapper">
+                  <label for="event-category"> Categoria </label>
+                  <select id="category">
+                    <option value="live"> Ao vivo</option>
+                    <option value="podecast"> Podecast</option>
+                    <option value="Mentorship">Mentoria</option>
+                  </select>
+                </div>
+
+              </div>
+                 
+                </fieldset>
+                
+                <fieldset>
+                <div class="fildset-wrapper"> 
+              <legend> Privacidade </legend>
+
+              <div class="input-wrapper">
+                <label for="event-email">E-mail do administrador <span> (digite um email válido) </span></label>
+                <input type="email" id="event-email" required minlength="8"/>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="event-password">Senha de acesso para os participantes <span> (mínimo 8 caracteres) </span></label>
+                <input type="password" id="event-password" required minlength="8"/>
+  
+              </div>
+
+              <div class="chackbox-wrapper">
+                <input type="checkbox" id="event-private"/>
+                <label for="event-private">Evento privado</label>
+              </div>
+
+              
+                  </div>
+                  </fieldset>
+
+                  <fieldset>
+                    <div class="fildset-wrapper"> 
+                  <legend> Dia e hora </legend>
+
+                  <div class="col-3">
+    
+                  <div class="input-wrapper">
+                    <label for="event-date">Data</label>
+                    <input type="date" id="event-date" required minlength="8"/>
+                  </div>
+    
+                  <div class="input-wrapper">
+                    <label for="event-begin">Das</label>
+                    <input type="time" id="event-begin" required minlength="8"/>
+                  </div>
+                    <div class="input-wrapper">
+                      <label for="event-end">até</label>
+                      <input type="time" id="event-end" required minlength="8"/>
+                  </div>
+                  </div>
+    
+                      </div>
+                      </fieldset>
+
+              </form>
+
+              <!--Botão dentro do form sempre esrá submit ira se referir a ele.
+               é preciso ficar atento, pois se não quiser se referir a ele usa-se 
+               <input type button value"aki dentro o nome"</>  -->
+
+              <footer>
+                
+                  <input form="my-form" class="button" type="submit" value="salvar evento">
+               
+              </footer>
+              <!--Pode usar um <button> dentro desse footer que também irá enviar (não é necessário esse value). E a tag my form irá submete-lo-->
+        </div>   
+    </body>
+  </html>
